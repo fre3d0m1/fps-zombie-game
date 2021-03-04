@@ -34,9 +34,10 @@ function ZombieSpawningService:Start()
             zombieClone.Parent = workspace
             zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
         end
-    end
 
-    wait(0.1)
+        print(i)
+        wait(1)
+    end
 end
 
 
