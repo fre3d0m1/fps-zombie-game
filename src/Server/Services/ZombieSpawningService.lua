@@ -28,7 +28,7 @@ function ZombieSpawningService:Start()
 
     for i = 0, 4 do
         local zombieClone = zombieTemplate:Clone()
-        local chosenSpawnpoint = math.random(0, #spawnpoints)
+        local chosenSpawnpoint = spawnpoints[math.random(0, #spawnpoints)]
 
         if zombieClone then
             zombieClone.Parent = workspace
