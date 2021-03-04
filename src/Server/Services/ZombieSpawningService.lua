@@ -10,6 +10,8 @@ local ZombieSpawningService = {Client = {}}
 function ZombieSpawningService:Start()
 	local replicatedStorage = game:GetService("ReplicatedStorage")
     local serverStorage = game:GetService("ServerStorage")
+
+    local zombieTemplate = serverStorage.zombieTemplate
 end
 
 
