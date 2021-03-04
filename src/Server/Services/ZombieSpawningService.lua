@@ -26,7 +26,7 @@ local zombieSpawnpoints = spawnpoints.Zombie
 function ZombieSpawningService:Start()
 	local spawnpoints = zombieSpawnpoints:GetChildren()
 
-    for i = 0, 4 do
+    for i = 1, 4 do
         local zombieClone = zombieTemplate:Clone()
         local chosenSpawnpoint = spawnpoints[math.random(0, #spawnpoints)]
 
