@@ -25,7 +25,16 @@ local zombieSpawnpoints = spawnpoints.Zombie
 
 function ZombieSpawningService:Start()
 	local spawnpoints = zombieSpawnpoints:GetChildren()
-    local chosenSpawnpoint = math.random(0, #spawnpoints)
+
+    for i = 0, 4 do
+        local zombieClone = zombieTemplate:Clone()
+        local chosenSpawnpoint = math.random(0, #spawnpoints)
+
+        if zombieClone then
+            zombieClone.Parent = workspace
+            zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint
+        end
+    end
 end
 
 
