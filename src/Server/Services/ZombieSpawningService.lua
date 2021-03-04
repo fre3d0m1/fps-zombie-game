@@ -19,11 +19,12 @@ local zombieTemplate = serverStorage.ZombieTemplate
 --<< Folders >>--
 
 local spawnpoints = workspace.Spawnpoints
+local zombieSpawnpoints = spawnpoints.Zombie
 
 --<< Functions >>--
 
 function ZombieSpawningService:Start()
-	
+	local spawnpoints = zombieSpawnpoints:GetChildren()
 end
 
 
