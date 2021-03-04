@@ -32,7 +32,7 @@ function ZombieSpawningService:Start()
 
         if zombieClone then
             zombieClone.Parent = workspace
-            zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint
+            zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
         end
     end
 end
