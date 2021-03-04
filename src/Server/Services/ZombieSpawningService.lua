@@ -14,7 +14,11 @@ local serverStorage = game:GetService("ServerStorage")
 
 --<< Templates >>--
 
-local zombieTemplate = serverStorage.zombieTemplate
+local zombieTemplate = serverStorage.ZombieTemplate
+
+--<< Folders >>--
+
+local spawnpoints = workspace.Spawnpoints
 
 --<< Functions >>--
 
