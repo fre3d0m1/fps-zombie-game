@@ -7,6 +7,8 @@
 
 local ZombieSpawningService = {Client = {}}
 
+local spawnDelay = 100
+
 --<< Services >>--
 
 local replicatedStorage = game:GetService("ReplicatedStorage")
@@ -26,14 +28,18 @@ local zombieSpawnpoints = spawnpoints.Zombie
 function ZombieSpawningService:Start()
 	local spawnpoints = zombieSpawnpoints:GetChildren()
 
-    for i = 1, 4 do
-        local zombieClone = zombieTemplate:Clone()
-        local chosenSpawnpoint = spawnpoints[math.random(1, #spawnpoints)]
+    while true do
+        for i = 1, 4 do
+            local zombieClone = zombieTemplate:Clone()
+            local chosenSpawnpoint = spawnpoints[math.random(1, #spawnpoints)]
 
-        if zombieClone then
-            zombieClone.Parent = workspace
-            zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
+            if zombieClone then
+                zombieClone.Parent = workspace
+                zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
+            end
         end
+
+        wait(spawnDelay)
     end
 end
 
