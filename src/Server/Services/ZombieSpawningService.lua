@@ -28,15 +28,12 @@ function ZombieSpawningService:Start()
 
     for i = 1, 4 do
         local zombieClone = zombieTemplate:Clone()
-        local chosenSpawnpoint = spawnpoints[math.random(0, #spawnpoints)]
+        local chosenSpawnpoint = spawnpoints[math.random(1, #spawnpoints)]
 
         if zombieClone then
             zombieClone.Parent = workspace
             zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
         end
-
-        print(i)
-        wait(1)
     end
 end
 
