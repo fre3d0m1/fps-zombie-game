@@ -35,6 +35,8 @@ function ZombieSpawningService:Start()
             zombieClone.HumanoidRootPart.CFrame = chosenSpawnpoint.CFrame
         end
     end
+
+    wait(0.1)
 end
 
 
